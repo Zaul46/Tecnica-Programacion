@@ -1,0 +1,47 @@
+body{
+    background-color: rgba(53, 66, 139, 0.151);
+}
+
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1{
+    padding-left: 40px;
+}
+
+img{
+    margin: 10px;
+    margin-left: 70px;
+    border-radius: 10px;
+    border-top: 3px solid rgba(0, 0, 0, 0.712);
+}
+
+h4{
+    padding-left: 20px;
+}
+
+div  li{
+    padding-left: 40px;
+}
+
+label{
+    padding-left: 20px;
+}
+
+#calificacion{
+    border-radius: 9px;
+}
+
+button{
+    margin-left: 20px ;
+}
+
+#resultado{
+    padding-left: 23px;
+}
+
+
+#recuperacion{
+    border-radius: 9px;
+}

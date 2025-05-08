@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de calificación con recuperación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sistema de calificación con recuperación</h1>
+    <img src="data:image/png;base64,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" alt="calificacion">
+    <h4>Pide una calificación numérica al usuario. Si es menor a 5, preguntar si presentó una prueba de recuperación (sí o no).</h4>
+    <div>
+        <li>Si presentó y obtuvo al menos 6, mostrar “Aprobado por recuperación”.</li>
+        <li> Si no presentó o sacó menos de 6, mostrar “Reprobado”.  </li>
+        <li> Si la nota inicial es 5 o más, mostrar “Aprobado normalmente”. </li>
+    </div>
+    <br><br>
+    <label>Ingrese una calificación (0-10):</label>
+    <input type="number" id="calificacion" min="0" max="10">
+    <br><br>
+    <button onclick="evaluar()">Evaluar</button>
+
+    <div id="pregunta-recuperacion" style="display: none;">
+        <br>
+        <label>¿Presentó la prueba de recuperación?</label>
+        <input type="text" id="recuperacion" placeholder="si o no">
+        <br><br>
+        <button onclick="evaluarRecuperacion()">Enviar</button>
+    </div>
+
+    <p id="resultado"></p>
+
+    <script>
+        function evaluar() {
+            let calificacion = parseFloat(document.getElementById("calificacion").value);
+            const preguntaDiv = document.getElementById("pregunta-recuperacion");
+            const resultadoDiv = document.getElementById("resultado");
+
+            if (isNaN(calificacion) || calificacion < 0 || calificacion > 10) {
+                resultadoDiv.textContent = "Por favor, ingrese una calificación válida entre 0 y 10.";
+                preguntaDiv.style.display = "none";
+            return;
+        }
+
+        if (calificacion < 5) {
+            preguntaDiv.style.display = "block";
+            resultadoDiv.textContent = "";
+        } else {
+            resultadoDiv.textContent = "Aprobado con calificación: " + calificacion;
+            preguntaDiv.style.display = "none";
+        }
+    }
+
+    function evaluarRecuperacion() {
+        const respuesta = document.getElementById("recuperacion").value.trim().toLowerCase();
+        const resultadoDiv = document.getElementById("resultado");
+
+        if (respuesta === "si") {
+            resultadoDiv.textContent = "Presentó recuperación. Puede tener otra oportunidad.";
+        } else if (respuesta === "no") {
+            resultadoDiv.textContent = "No presentó recuperación. Reprobado.";
+        } else {
+            resultadoDiv.textContent = "Respuesta inválida. Escriba 'si' o 'no'.";
+        }
+    }
+</script>
+
+</body>
+</html>

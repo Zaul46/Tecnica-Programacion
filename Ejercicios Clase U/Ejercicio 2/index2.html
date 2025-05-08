@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de calificación con recuperación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Evaluación de Calificación</h1>
+    <img src="/img/descarga.png" alt="">
+    <h4>Solicita al usuario una nota del 0 al 100 y muestra su equivalencia en calificación con letra según la siguiente escala:</h4>
+    <div>
+        <li> 90 a 100 : A</li>
+        <li> 80 a 89 : B </li>
+        <li> 70 a 79 : C </li>
+        <li> 60 a 69 : D </li>
+        <li> Menor a 60 : F </li>
+        <li> Si la nota esta fuera de ese rango, muestra "Nota Invalida</li>
+    </div>
+    <br><br>
+    <label>Ingrese una calificación (0-10):</label>
+    <input type="number" id="calificacion" min="0" max="10">
+    <br><br>
+    <button onclick="evaluar()">Evaluar</button>
+
+    <div id="pregunta-recuperacion" style="display: none;">
+        <br>
+        <label>¿Presentó la prueba de recuperación?</label>
+        <input type="text" id="recuperacion" placeholder="si o no">
+        <br><br>
+        <button onclick="evaluarRecuperacion()">Enviar</button>
+    </div>
+
+    <p id="resultado"></p>
+
+    <script>
+        function evaluar() {
+            let calificacion = parseFloat(document.getElementById("calificacion").value);
+            const preguntaDiv = document.getElementById("pregunta-recuperacion");
+            const resultadoDiv = document.getElementById("resultado");
+
+            if (isNaN(calificacion) || calificacion < 0 || calificacion > 10) {
+                resultadoDiv.textContent = "Por favor, ingrese una calificación válida entre 0 y 10.";
+                preguntaDiv.style.display = "none";
+            return;
+        }
+
+        if (calificacion < 5) {
+            preguntaDiv.style.display = "block";
+            resultadoDiv.textContent = "";
+        } else {
+            resultadoDiv.textContent = "Aprobado con calificación: " + calificacion;
+            preguntaDiv.style.display = "none";
+        }
+    }
+
+    function evaluarRecuperacion() {
+        const respuesta = document.getElementById("recuperacion").value.trim().toLowerCase();
+        const resultadoDiv = document.getElementById("resultado");
+
+        if (respuesta === "si") {
+            resultadoDiv.textContent = "Presentó recuperación. Puede tener otra oportunidad.";
+        } else if (respuesta === "no") {
+            resultadoDiv.textContent = "No presentó recuperación. Reprobado.";
+        } else {
+            resultadoDiv.textContent = "Respuesta inválida. Escriba 'si' o 'no'.";
+        }
+    }
+</script>
+
+</body>
+</html>

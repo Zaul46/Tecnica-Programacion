@@ -7,16 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Evaluación de Calificación</h1>
+    <h1>Sistema de calificación con recuperación</h1>
     <img src="/img/descarga.png" alt="">
-    <h4>Solicita al usuario una nota del 0 al 100 y muestra su equivalencia en calificación con letra según la siguiente escala:</h4>
+    <h4>Pide una calificación numérica al usuario. Si es menor a 5, preguntar si presentó una prueba de recuperación (sí o no).</h4>
     <div>
-        <li> 90 a 100 : A</li>
-        <li> 80 a 89 : B </li>
-        <li> 70 a 79 : C </li>
-        <li> 60 a 69 : D </li>
-        <li> Menor a 60 : F </li>
-        <li> Si la nota esta fuera de ese rango, muestra "Nota Invalida</li>
+        <li> Si presentó y obtuvo al menos 6, mostrar “Aprobado por recuperación”</li>
+        <li>Si no presentó o sacó menos de 6, mostrar “Reprobado”.</li>
+        <li> Si la nota inicial es 5 o más, mostrar “Aprobado normalmente”.</li>
     </div>
     <br><br>
     <label>Ingrese una calificación (0-10):</label>
